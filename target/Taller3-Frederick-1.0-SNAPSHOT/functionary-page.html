@@ -6,22 +6,26 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-    <p>Mostrar fotos</p>
+    <p>Lista de mascotas</p>
     <br><br><br><br>
 
-    <table>
-        <thead>
-        <th class="column-header column-header-id">ID</th>
-        <th class="column-header">Fecha de registro</th>
-        <th class="column-header">Pet Name</th>
-        <th class="column-header">Acciones</th>
+    <img src="" id="pet-image">
 
-        </thead>
-        <tbody id="body-table">
+    <script>
 
-        </tbody>
+        fetch("jsonServlet").then(response => response.json()).then(data => {
 
-    </table>
+            document.getElementById("pet-image").setAttribute("src", "uploads/" + data[0].imageName)
+
+        });
+        fetch("jsonServlet").then(response => response.json()).then(data => {
+
+            document.getElementById("pet-image").setAttribute("src", "uploads/" + data[1].imageName)
+
+        });
+
+
+    </script>
 
     </body>
 </html>

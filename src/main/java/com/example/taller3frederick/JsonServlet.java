@@ -20,7 +20,10 @@ public class JsonServlet extends HttpServlet {
 
         ArrayList<Pet> pets = new ArrayList<Pet>();
 
-        pets.add(new Pet("petName", "pet-image"));
+        pets.add(new Pet("Duki","img1.jpg"));
+        pets.add(new Pet("Wos", "img2.jpg"));
+        //pets.add(new Pet("petName","fileName"));
+
 
         PrintWriter out = response.getWriter();
         out.println(new Gson().toJson(pets));
