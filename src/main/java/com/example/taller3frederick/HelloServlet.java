@@ -32,6 +32,7 @@ public class HelloServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<html><head>");
             out.println("<meta http-equiv='refresh' content='1; URL=owner-page.html'>");
+            out.println("<link rel=\"stylesheet\" href=\"./style.css\">");
             out.println("</head><body>");
             out.println("<h1>" + message + "</h1>");
             out.println("</body></html>");
@@ -54,17 +55,40 @@ public class HelloServlet extends HttpServlet {
             out.println("<h1>" + message + "</h1>");
             out.println("</body></html>");
 
+        }else{
+            response.sendError(401);
         }
 
+    }
 
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        String volver = request.getParameter("volver");
+        response.setContentType("text/html");
 
-        // Hello
         PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<html><head>");
+        out.println("<meta http-equiv='refresh' content='1; URL=owner-page.html'>");
+        out.println("</head><body>");
         out.println("</body></html>");
     }
 
     public void destroy() {
     }
 }
+
+/*html{
+        background-color: rgb(31, 31, 31);
+        color: white;
+        padding-top: 30px; padding-left: 10px; padding-right: 10px;
+        font-size: larger;
+        text-align: center;
+        }
+        .fondo{
+        background-image: url("https://www.atiramhotels.com/wp-content/uploads/2018/12/grey-dark-vintage-background-texture-510x300.jpg");
+        }
+
+        .med{
+        font-size: 60px;
+        }*/
+
+//<link rel="stylesheet" href="./style.css">

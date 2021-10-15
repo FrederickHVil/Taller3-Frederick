@@ -1,10 +1,17 @@
 html{
     background-color: rgb(31, 31, 31);
     color: white;
-    padding-top: 20px; padding-left: 10px; padding-right: 10px;
+    padding-top: 30px; padding-left: 10px; padding-right: 10px;
+    font-size: larger;
     text-align: center;
+}
+
+index.med{
     font-size: 60px;
 }
-h1{
-    color: rgb(232, 255, 21);
+th{
+    border: 1px solid; border-color: gold; padding: 5px;
+}
+table{
+    border: 1px solid gold; border-collapse: collapse;
 }

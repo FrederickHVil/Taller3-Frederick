@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
 
+        <link rel="stylesheet" href="./style.css">
         <meta charset="UTF-8">
         <title>Owner Page</title>
-        <link rel="stylesheet" href="./style.css">
+
     </head>
     <body>
-    Nombre de la mascota: <input type="text" name="petname">
-    <br><br>
-    <input type="submit" value="Cargar">
+
+    <form method="post" action="multipartServlet" enctype="multipart/form-data">
+
+        Choose a file: <input type="file" name="multipartServlet">
+        <br><br>
+        Nombre de la mascota: <input type="text" name="petName" id="nombrePet">
+        <br><br><br>
+        <input type="submit" value="Cargar Imagen">
+
+    </form>
 
     </body>
+
 </html>
+
